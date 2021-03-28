@@ -11,6 +11,7 @@ x86/x86\_64 packages
 
 These original packages are found under
 
+ - http://tinycorelinux.net/12.x/
  - http://tinycorelinux.net/11.x/
  - http://tinycorelinux.net/10.x/
  - http://tinycorelinux.net/9.x/
@@ -20,6 +21,8 @@ These original packages are found under
 
 and Dockerfile of these images are found at
 
+- [`12.0-x86` (12.0/x86/Dockerfile)](https://github.com/afbjorklund/docker-tinycore/blob/tinycore-12.0/12.0/x86/Dockerfile)
+- [`12.0-x86_64` (12.0/x86\_64/Dockerfile)](https://github.com/afbjorklund/docker-tinycore/blob/tinycore-12.0/12.0/x86_64/Dockerfile)
 - [`11.0-x86`, `latest` (11.0/x86/Dockerfile)](https://github.com/tatsushid/docker-tinycore/blob/master/11.1/x86/Dockerfile)
 - [`11.0-x86_64` (11.0/x86\_64/Dockerfile)](https://github.com/tatsushid/docker-tinycore/blob/master/11.1/x86_64/Dockerfile)
 - [`10.1-x86` (10.1/x86/Dockerfile)](https://github.com/tatsushid/docker-tinycore/blob/master/10.1/x86/Dockerfile)
@@ -57,13 +60,13 @@ The easiest way to install the image is pulling it from
 [Docker Hub repositories](https://registry.hub.docker.com/) like following
 
 ```bash
-docker pull tatsushid/tinycore:11.0-x86
+docker pull afbjorklund/tinycore:12.0-x86
 ```
 
 or
 
 ```bash
-docker pull tatsushid/tinycore:11.0-x86_64
+docker pull afbjorklund/tinycore:12.0-x86_64
 ```
 
 ## Usage
@@ -71,13 +74,13 @@ docker pull tatsushid/tinycore:11.0-x86_64
 Just run
 
 ```bash
-docker run -it tatsushid/tinycore:11.0-x86
+docker run -it afbjorklund/tinycore:12.0-x86
 ```
 
 or
 
 ```bash
-docker run -it tatsushid/tinycore:11.0-x86_64
+docker run -it afbjorklund/tinycore:12.0-x86_64
 ```
 
 To install tcz packages into the container and use them, please run `tce-load`
@@ -90,7 +93,7 @@ tce-load -wic bash.tcz
 or run the container with privilege mode like following
 
 ```bash
-docker run -it --privileged tatsushid/tinycore:11.0-x86
+docker run -it --privileged afbjorklund/tinycore:12.0-x86
 ```
 
 Once it starts with privilege mode, you can run the package manager like
